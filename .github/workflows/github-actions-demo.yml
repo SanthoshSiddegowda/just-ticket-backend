@@ -26,8 +26,8 @@ jobs:
               AWS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
               AWS_KEY_SECRET: ${{ secrets.AWS_KEY_SECRET }}
         run: |
-          echo "$env:AWS_KEY_ID"
-          echo "$env:AWS_KEY_SECRET"
+          echo ${{ secrets.AWS_KEY_ID }}
+          echo ${{ secrets.AWS_KEY_ID }}
 #          serverless config credentials --provider aws --key "$env:AWS_KEY_ID" --secret "$env:AWS_KEY_SECRET"
       - name: config clear
         run: |
