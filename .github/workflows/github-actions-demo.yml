@@ -27,7 +27,7 @@ jobs:
               AWS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
               AWS_KEY_SECRET: ${{ secrets.AWS_KEY_SECRET }}
         run: |
-          serverless config credentials --provider aws --key "$env: AWS_KEY_ID" --secret "$env: AWS_KEY_SECRET"
+          serverless config credentials --provider aws --key "$env:AWS_KEY_ID" --secret "$env:AWS_KEY_SECRET"
       - name: config clear
         run: |
           php artisan config:clear
