@@ -17,7 +17,7 @@ jobs:
           ls ${{ github.workspace }}
       - name: Adding dependency
         run: |
-          composer install
+          composer install --no-dev
       - name: Adding serverless package
         run: |
           npm install -g serverless
@@ -27,6 +27,9 @@ jobs:
       - name: Decrypt Env file
         run: |
           php artisan env:decrypt --key=${{ secrets.ENV_DECRYPT_KEY }}
+      - name: Migration of table if required
+        run: |
+          php artisan migrate
       - name: config clear
         run: |
           php artisan config:clear
