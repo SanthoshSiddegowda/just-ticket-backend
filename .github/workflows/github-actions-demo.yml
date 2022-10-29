@@ -8,6 +8,7 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - name: version test
         run: |
+           ls ${{ github.workspace }}
            composer install
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
