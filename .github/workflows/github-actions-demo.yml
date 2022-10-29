@@ -6,9 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - name: php test
+      - name: version test
         run: |
           php --version
+          composer --version
+          npm --version
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
 
