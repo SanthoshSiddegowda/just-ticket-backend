@@ -9,7 +9,6 @@ jobs:
       - name: version test
         run: |
            ls ${{ github.workspace }}
-           composer install
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
 
