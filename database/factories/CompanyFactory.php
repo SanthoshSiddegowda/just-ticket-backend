@@ -27,8 +27,8 @@ class CompanyFactory extends Factory
                 'proceed_text' => 'Checkout',
                 'order_detail_text' => 'Details',
                 'order_text' => 'Place Order',
-                //				'currency_symbol' => '&#8377;',
-                'currency_symbol' => '&#8364;',
+                'currency_symbol' => '&#8377;', //Rupees
+                //'currency_symbol' => '&#8364;', #Euro
             ]),
             'domain' => 'localhost:3000',
         ];
