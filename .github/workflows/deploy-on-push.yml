@@ -30,7 +30,7 @@ jobs:
           php artisan migrate
       - name: config clear
         run: |
-          php artisan optimize:clear
+          php artisan config:clear
       - name: serverless deploy of the project
         run: |
           serverless deploy
